@@ -1,3 +1,5 @@
+# TODO:
+# - desc; fix build.
 Summary:	libowfat - reimplement libdjb
 Name:		libowfat
 Version:	0.23
@@ -12,12 +14,6 @@ BuildRequires:	dietlibc-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-One of the best ways to learn good programming practices is to read
-others people's code. I have read the source code from a lot of
-people. One of the most inspiring moments of my career as C programmer
-was to look at Dan Bernstein's code. While most programmers stumble
-about bad APIs throughout their life, Dan started not only question
-them, but he defined new and better APIs and implemented them.
 
 %prep
 %setup -q

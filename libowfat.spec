@@ -6,7 +6,7 @@ License:	GPL
 Group:		Applications
 Source0:	http://dl.fefe.de/%{name}-%{version}.tar.bz2
 # Source0-md5:	08b0686d2423dc586fe732ee3c51b0c3
-Patch0:		libowfat-DESTDIR.patch
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.fefe.de/libowfat/
 BuildRequires:	dietlibc-devel
 #Requires:	-

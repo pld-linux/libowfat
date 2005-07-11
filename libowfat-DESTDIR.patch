@@ -1,0 +1,24 @@
+diff -ur libowfat-0.23/GNUmakefile libowfat-0.23.new/GNUmakefile
+--- libowfat-0.23/GNUmakefile	2005-05-12 08:03:38.000000000 +0000
++++ libowfat-0.23.new/GNUmakefile	2005-07-11 20:21:32.603059344 +0000
+@@ -4,7 +4,7 @@
+ # in /opt/diet, where they are in the default search path for my diet libc
+ # work but don't conflict with anything there.  YMMV.
+ 
+-prefix=/opt/diet
++prefix=${DESTDIR}/opt/diet
+ LIBDIR=${prefix}/lib
+ INCLUDEDIR=${prefix}/include
+ MAN3DIR=${prefix}/man/man3
+diff -ur libowfat-0.23/Makefile libowfat-0.23.new/Makefile
+--- libowfat-0.23/Makefile	2005-05-20 15:42:05.000000000 +0000
++++ libowfat-0.23.new/Makefile	2005-07-11 20:18:44.395630760 +0000
+@@ -5,7 +5,7 @@
+ # in /opt/diet, where they are in the default search path for my diet libc
+ # work but don't conflict with anything there.  YMMV.
+ 
+-prefix=/opt/diet
++prefix=${DESTDIR}/opt/diet
+ LIBDIR=${prefix}/lib
+ INCLUDEDIR=${prefix}/include
+ MAN3DIR=${prefix}/man/man3

@@ -9,7 +9,6 @@ Source0:	http://dl.fefe.de/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.fefe.de/libowfat/
 BuildRequires:	dietlibc-devel
-#Requires:	-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,8 +28,6 @@ them, but he defined new and better APIs and implemented them.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -41,5 +38,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README TODO
-
 %attr(755,root,root) /opt/diet/*

@@ -2,7 +2,7 @@ Summary:	libowfat - reimplement libdjb
 Name:		libowfat
 Version:	0.23
 Release:	0.2
-License:	GPL
+License:	GPL v2
 Group:		Applications
 Source0:	http://dl.fefe.de/%{name}-%{version}.tar.bz2
 # Source0-md5:	08b0686d2423dc586fe732ee3c51b0c3
@@ -13,8 +13,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 libowfat is a library of general purpose APIs extracted from Dan
-Bernstein's software, reimplemented and covered by the GNU General
-Public License Version 2 (no later versions).
+Bernstein's software.
 
 %prep
 %setup -q

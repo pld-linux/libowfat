@@ -1,9 +1,7 @@
-# TODO:
-# - desc; fix build.
 Summary:	libowfat - reimplement libdjb
 Name:		libowfat
 Version:	0.23
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications
 Source0:	http://dl.fefe.de/%{name}-%{version}.tar.bz2
@@ -14,6 +12,9 @@ BuildRequires:	dietlibc-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+libowfat is a library of general purpose APIs extracted from Dan
+Bernstein's software, reimplemented and covered by the GNU General
+Public License Version 2 (no later versions).
 
 %prep
 %setup -q
@@ -34,4 +35,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README TODO
-%attr(755,root,root) /opt/diet/*
+%attr(755,root,root) %{_libdir}/*
+%{_includedir}/*.h
+%{_mandir}/man3/*

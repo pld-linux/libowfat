@@ -1,4 +1,6 @@
+# TODO: optflags
 Summary:	libowfat - reimplement libdjb
+Summary(pl):	libowfat - reimplementacja libdjb
 Name:		libowfat
 Version:	0.23
 Release:	0.2
@@ -14,6 +16,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 libowfat is a library of general purpose APIs extracted from Dan
 Bernstein's software.
+
+%description -l pl
+libowfat to biblioteka API ogólnego przeznaczenia wyci±gniêtego z
+oprogramowania Dana Bernsteina.
 
 %prep
 %setup -q

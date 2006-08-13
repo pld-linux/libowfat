@@ -2,12 +2,12 @@
 Summary:	libowfat - reimplement libdjb
 Summary(pl):	libowfat - reimplementacja libdjb
 Name:		libowfat
-Version:	0.23
-Release:	0.2
+Version:	0.24
+Release:	0.1
 License:	GPL v2
 Group:		Applications
 Source0:	http://dl.fefe.de/%{name}-%{version}.tar.bz2
-# Source0-md5:	08b0686d2423dc586fe732ee3c51b0c3
+# Source0-md5:	a38b74998a45fd6c47e93e0fec1f6560
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.fefe.de/libowfat/
 BuildRequires:	dietlibc-devel

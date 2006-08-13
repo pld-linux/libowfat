@@ -1,6 +1,6 @@
-diff -ur libowfat-0.23/GNUmakefile libowfat-0.23.new/GNUmakefile
---- libowfat-0.23/GNUmakefile	2005-05-12 08:03:38.000000000 +0000
-+++ libowfat-0.23.new/GNUmakefile	2005-07-12 07:34:32.865003192 +0000
+diff -ur libowfat-0.24/GNUmakefile libowfat-0.24.new/GNUmakefile
+--- libowfat-0.24/GNUmakefile	2005-05-12 10:03:38.000000000 +0200
++++ libowfat-0.24.new/GNUmakefile	2006-08-13 19:19:21.276995473 +0200
 @@ -4,10 +4,10 @@
  # in /opt/diet, where they are in the default search path for my diet libc
  # work but don't conflict with anything there.  YMMV.
@@ -14,15 +14,54 @@ diff -ur libowfat-0.23/GNUmakefile libowfat-0.23.new/GNUmakefile
  
  LIBS=byte.a fmt.a scan.a str.a uint.a open.a stralloc.a unix.a socket.a \
  buffer.a mmap.a taia.a tai.a dns.a case.a mult.a array.a io.a textcode.a
-diff -ur libowfat-0.23/Makefile libowfat-0.23.new/Makefile
---- libowfat-0.23/Makefile	2005-05-20 15:42:05.000000000 +0000
-+++ libowfat-0.23.new/Makefile	2005-07-11 20:18:44.395630760 +0000
-@@ -5,7 +5,7 @@
+@@ -39,7 +39,7 @@
+ ifneq ($(DIET),)
+ DIETLIBPATH=$(shell $(DIET) -L $(CC))
+ ifneq ($(wildcard $(DIETLIBPATH)/*ibc.a),)
+-LIBDIR=$(DIETLIBPATH)
++LIBDIR=${prefix}/lib
+ endif
+ ifneq ($(DEBUG),1)
+ DIET+=-Os
+@@ -155,9 +155,9 @@
+ 
+ install: libowfat.a
+ 	install -d $(INCLUDEDIR) $(MAN3DIR) $(LIBDIR)
+-	install -m 644 $(INCLUDES) $(INCLUDEDIR)
+-	install -m 644 $(wildcard */*.3) $(MAN3DIR)
+-	install -m 644 libowfat.a $(LIBDIR)
++	install $(INCLUDES) $(INCLUDEDIR)
++	install $(wildcard */*.3) $(MAN3DIR)
++	install libowfat.a $(LIBDIR)
+ 
+ uninstall:
+ 	rm -f $(patsubst %.h,$(INCLUDEDIR)/%.h,$(INCLUDES))
+diff -ur libowfat-0.24/Makefile libowfat-0.24.new/Makefile
+--- libowfat-0.24/Makefile	2006-08-13 19:02:37.796690935 +0200
++++ libowfat-0.24.new/Makefile	2006-08-13 19:07:26.356212631 +0200
+@@ -5,10 +5,10 @@
  # in /opt/diet, where they are in the default search path for my diet libc
  # work but don't conflict with anything there.  YMMV.
  
 -prefix=/opt/diet
-+prefix=${DESTDIR}/opt/diet
++prefix=${DESTDIR}/usr
  LIBDIR=${prefix}/lib
  INCLUDEDIR=${prefix}/include
- MAN3DIR=${prefix}/man/man3
+-MAN3DIR=${prefix}/man/man3
++MAN3DIR=${prefix}/share/man/man3
+ 
+ LIBS=byte.a fmt.a scan.a str.a uint.a open.a stralloc.a unix.a socket.a \
+ buffer.a mmap.a taia.a tai.a dns.a case.a mult.a array.a io.a textcode.a
+@@ -634,9 +634,9 @@
+ 
+ install: libowfat.a
+ 	install -d $(INCLUDEDIR) $(MAN3DIR) $(LIBDIR)
+-	install -m 644 $(INCLUDES) $(INCLUDEDIR)
+-	install -m 644 $(wildcard */*.3) $(MAN3DIR)
+-	install -m 644 libowfat.a $(LIBDIR)
++	install $(INCLUDES) $(INCLUDEDIR)
++	install $(wildcard */*.3) $(MAN3DIR)
++	install libowfat.a $(LIBDIR)
+ 
+ uninstall:
+ 	rm -f $(patsubst %.h,$(INCLUDEDIR)/%.h,$(INCLUDES))

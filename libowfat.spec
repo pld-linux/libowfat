@@ -1,5 +1,5 @@
 Summary:	libowfat - reimplement libdjb
-Summary(pl.UTF-8):   libowfat - reimplementacja libdjb
+Summary(pl.UTF-8):	libowfat - reimplementacja libdjb
 Name:		libowfat
 Version:	0.24
 Release:	0.1

@@ -1,12 +1,12 @@
 Summary:	libowfat - reimplement libdjb
 Summary(pl.UTF-8):	libowfat - reimplementacja libdjb
 Name:		libowfat
-Version:	0.24
+Version:	0.27
 Release:	0.1
 License:	GPL v2
 Group:		Applications
 Source0:	http://dl.fefe.de/%{name}-%{version}.tar.bz2
-# Source0-md5:	a38b74998a45fd6c47e93e0fec1f6560
+# Source0-md5:	10d007d8f610edfebe890a66884a336e
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.fefe.de/libowfat/
 BuildRequires:	dietlibc-devel
@@ -33,7 +33,8 @@ oprogramowania Dana Bernsteina.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	LIBDIR=$RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT

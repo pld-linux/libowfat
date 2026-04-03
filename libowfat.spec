@@ -2,7 +2,7 @@ Summary:	libowfat - reimplement libdjb
 Summary(pl.UTF-8):	libowfat - reimplementacja libdjb
 Name:		libowfat
 Version:	0.34
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications
 Source0:	https://www.fefe.de/libowfat/%{name}-%{version}.tar.xz

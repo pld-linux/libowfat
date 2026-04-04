@@ -9,6 +9,7 @@ Source0:	http://www.fefe.de/libowfat/%{name}-%{version}.tar.xz
 # Source0-md5:	ca7ca7c14e66cc148ac663a29126f4d0
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.fefe.de/libowfat/
+BuildRequires:	gcc >= 6:7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
